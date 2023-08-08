@@ -65,9 +65,9 @@ namespace CodingTest.Controllers
         }
 
 
-        [Route("/api/list/{id}? name = {new name}")]
+        [Route("/api/list/{id}")]
         [HttpPatch]
-        public IActionResult PatchObjects([FromBody] int id, JsonPatchDocument jsonPatchDocument)
+        public IActionResult PatchObjects([FromBody] int id)
         {
             var obj = lstObjects.Find(x => x.Id == id);
             return Ok(obj);
